@@ -18,8 +18,6 @@ class LibdvdnavConan(ConanFile):
 
     source_subfolder = "source_subfolder"
 
-    download_url = 'http://www.videolan.org/pub/videolan/libdvdnav/5.0.1/libdvdnav-5.0.1.tar.bz2'
-
     def source(self):
         tools.get('http://www.videolan.org/pub/videolan/{name}/{version}/{name}-{version}.tar.bz2'.format(name=self.name,version=self.version))
         extracted_dir = self.name + "-" + self.version
